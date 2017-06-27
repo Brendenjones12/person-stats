@@ -19,7 +19,12 @@ function updateHeading(ev){
     const age = f.age.value
     const stats = document.querySelector('#stats')
     //stats.textContent = name
-    stats.innerHTML = '<p>' + name+ ',' + age + '</p>'
+    //stats.innerHTML = '<p>' + name+ ',' + ' ' + age + '</p>'
+    stats.innerHTML = `
+    <p> 
+    ${name}, age ${age}
+    </p>
+    `
 }
 const personForm = document.querySelector("#person-form")
 personForm.addEventListener('submit', updateHeading)
