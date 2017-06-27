@@ -12,17 +12,17 @@ personForm.addEventListener('submit', updateHeading)*/
 
 
 //HomeWork
-function updateDiv(ev){
+function updateHeading(ev){
     ev.preventDefault()
     const f = event.target
     const name = f.personName.value
-    const Div = document.querySelector('#stats')
-    Div.textContent = name
-    
+    const age = f.age.value
+    const stats = document.querySelector('#stats')
+    //stats.textContent = name
+    stats.innerHTML = '<p>' + name+ ',' + age + '</p>'
 }
-
-const Change = document.querySelector('#person-form')
-Change.addEventListener('submit', updateDiv)
+const personForm = document.querySelector("#person-form")
+personForm.addEventListener('submit', updateHeading)
 
 //
 //
@@ -33,7 +33,7 @@ Change.addEventListener('submit', updateDiv)
     ev.preventDefault()
     const f =event.target
     const name = f.color.Value
-    const stats = document.querySelector('#stats')
+    const stats = document.querySelector('#stats p')
     ArrayList.push(name)
     stats.textContent = ArrayList
 }
