@@ -26,11 +26,30 @@ function updateHeading(ev){
     const stats = document.querySelector('#stats p')
     //stats.textContent = name
     //stats.innerHTML = '<p>' + name+ ',' + ' ' + age + '</p>'
-    stats.innerHTML = `
-    <p> 
-    ${name}, age ${age}, Fav Color ${color}
-    </p>
-    `
+    
+    const list = document.createElement('ul')
+
+    const nameItem = document.createElement('li')
+    nameItem.textContent = `Name: ${name}`
+    list.appendChild(nameItem)
+
+    const colorItem = document.createElement('li')
+    colorItem.textContent = `Color: ${color}`
+    list.appendChild(colorItem)
+
+    const ageItem = document.createElement('li')
+    ageItem.textContent = `Age: ${age}`
+    list.appendChild(ageItem)
+
+
+    stats.appendChild(list)
+
+    
+    // stats.innerHTML = `
+    // <p> 
+    // ${name}, age ${age}, Fav Color ${color}
+    // </p>
+    
     stats.style.color = color
 }
 const personForm = document.querySelector("#person-form")
