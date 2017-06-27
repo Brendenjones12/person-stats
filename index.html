@@ -1,42 +1,38 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Person Stats</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css" integrity="sha256-itWEYdFWzZPBG78bJOOiQIn06QCgN/F0wMDcC4nOhxY=" crossorigin="anonymous" />
-    <link rel="stylesheet" href='index.css'>
-    </head>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Person Stats</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.3.1/css/foundation.min.css"
+    >
+    <link rel="stylesheet" href="index.css">
+  </head>
+  <body>
+    <h1>Person Stats</h1>
 
-    <body style='background-color: black'>
-        <h1 style='background-color: red'> Person Stats </h1>
-<form id="person-form">
-    <p>
-        <label for="personName" style='color:red'>name</label>
-        <input type="text" name="personName" style='color:blue'>
-    </p>
-    <p>
-        <label for="age" style='color:red'>age</label>
+    <form id="person-form">
+      <p>
+        <label for="personName">Name</label>
+        <input type="text" name="personName">
+      </p>
+      <p>
+        <label for="age">Age</label>
         <input type="number" name="age">
-    </p>
-    <p>
-        <label for="color" style='color:red'>Fav Color</label>
-        <input type="text" name="color">
-    </p>
+      </p>
+      <p>
+        <label for="favoriteColor">Favorite color</label>
+        <input type="color" name="favoriteColor">
+      </p>
+      <button type="submit">Go</button>
+    </form>
 
-    <button type="submit" style='background-color:red' style='color:blue' >Go</button>
-</form>
-
-<div id="stats">
-<p style= 'background-color: black'></p>
-</div>
-
-<script src="index.js"></script>
-
-    </body>
+    <div id="stats"></div>
+    
+    <script src="index.js"></script>
+  </body>
 </html>

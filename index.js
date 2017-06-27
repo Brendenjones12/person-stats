@@ -1,57 +1,40 @@
+function handleSubmit(ev) {
+  ev.preventDefault()
+  const f = ev.target
 
-//Class Stuff
-/*function updateHeading(ev){
-    ev.preventDefault()
-    const f = event.target
-    const name = f.personName.value
-    const heading = document.querySelector('h1')
-    heading.textContent = name
+  const name = f.personName.value
+  const age = f.age.value
+  const favoriteColor = f.favoriteColor.value
+
+  const list = document.createElement('ul')
+
+  const nameItem = document.createElement('li')
+  nameItem.textContent = `Name: ${name}`
+  list.appendChild(nameItem)
+
+  const ageItem = document.createElement('li')
+  ageItem.textContent = `Age: ${age}`
+  list.appendChild(ageItem)
+
+  const colorItem = document.createElement('li')
+  colorItem.textContent = 'Favorite Color: '
+
+ 
+  colorItem.appendChild(renderColor(favoriteColor))
+
+  list.appendChild(colorItem)
+
+  const stats = document.querySelector('#stats')
+  stats.appendChild(list)
 }
-const personForm = document.querySelector("#person-form")
-personForm.addEventListener('submit', updateHeading)*/
-
-
-//
-//
-//
-
-
-//HomeWork
-function updateHeading(ev){
-    ev.preventDefault()
-    const f = event.target
-    const name = f.personName.value
-    const age = f.age.value
-    const color = f.color.value
-    const stats = document.querySelector('#stats p')
-    //stats.textContent = name
-    //stats.innerHTML = '<p>' + name+ ',' + ' ' + age + '</p>'
-    
-    const list = document.createElement('ul')
-
-    const nameItem = document.createElement('li')
-    nameItem.textContent = `Name: ${name}`
-    list.appendChild(nameItem)
-
-    const colorItem = document.createElement('li')
-    colorItem.textContent = `Color: ${color}`
-    list.appendChild(colorItem)
-
-    const ageItem = document.createElement('li')
-    ageItem.textContent = `Age: ${age}`
-    list.appendChild(ageItem)
-
-
-    stats.appendChild(list)
-
-    
-    // stats.innerHTML = `
-    // <p> 
-    // ${name}, age ${age}, Fav Color ${color}
-    // </p>
-    
-    stats.style.color = color
+//Homework #2 function 1
+function renderColor(favoriteColor){
+    const colorDiv = document.createElement('div')
+    colorDiv.style.backgroundColor = favoriteColor
+    colorDiv.style.width = '6rem'
+    colorDiv.style.height = '3rem'
+    return colorDiv
 }
-const personForm = document.querySelector("#person-form")
-personForm.addEventListener('submit', updateHeading)
 
+const personForm = document.querySelector('#person-form')
+personForm.addEventListener('submit', handleSubmit)
