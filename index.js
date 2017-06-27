@@ -1,6 +1,6 @@
 
 
-function updateHeading(ev){
+/*function updateHeading(ev){
     ev.preventDefault()
     const f = event.target
     const name = f.personName.value
@@ -8,7 +8,7 @@ function updateHeading(ev){
     heading.textContent = name
 }
 const personForm = document.querySelector("#person-form")
-personForm.addEventListener('submit', updateHeading)
+personForm.addEventListener('submit', updateHeading)*/
 
 
 //HomeWork
