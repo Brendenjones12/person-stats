@@ -23,7 +23,7 @@ function updateHeading(ev){
     const name = f.personName.value
     const age = f.age.value
     const color = f.color.value
-    const stats = document.querySelector('#stats')
+    const stats = document.querySelector('#stats p')
     //stats.textContent = name
     //stats.innerHTML = '<p>' + name+ ',' + ' ' + age + '</p>'
     stats.innerHTML = `
